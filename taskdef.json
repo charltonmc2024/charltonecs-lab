@@ -2,7 +2,7 @@
     "executionRoleArn": "arn:aws:iam::230339925016:role/ecsTaskExecutionRole",
     "containerDefinitions": [
         {
-            "name": "sample-website",
+            "name": "IMAGE1_NAME",
             "image": "230339925016.dkr.ecr.us-east-1.amazonaws.com/nginx:latest",
             "essential": true,
             "portMappings": [
