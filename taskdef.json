@@ -1,24 +1,24 @@
 {
-    "executionRoleArn": "arn:aws:iam::230339925016:role/ecsTaskExecutionRole",
-    "containerDefinitions": [
+  "family": "ecs-lab",
+  "executionRoleArn": "arn:aws:iam::230339925016:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "IMAGE1_NAME",  
+      "image": "230339925016.dkr.ecr.us-east-1.amazonaws.com/myrepo:latest",
+      "essential": true,
+      "portMappings": [
         {
-            "name": "IMAGE1_NAME",
-            "image": "230339925016.dkr.ecr.us-east-1.amazonaws.com/nginx:latest",
-            "essential": true,
-            "portMappings": [
-                {
-                    "hostPort": 80,
-                    "protocol": "tcp",
-                    "containerPort": 80
-                }
-            ]
+          "containerPort": 80,
+          "hostPort": 80,
+          "protocol": "tcp"
         }
-    ],
-    "requiresCompatibilities": [
-        "FARGATE"
-    ],
-    "networkMode": "awsvpc",
-    "cpu": "256",
-    "memory": "512",
-    "family": "ecs-lab"
+      ]
+    }
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "256",
+  "memory": "512"
 }
