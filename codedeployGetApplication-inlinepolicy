@@ -1,0 +1,19 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": [
+				"codedeploy:CreateDeployment",
+				"codedeploy:GetDeployment",
+				"codedeploy:GetDeploymentConfig",
+				"codedeploy:RegisterApplicationRevision"
+			],
+			"Resource": [
+				"arn:aws:codedeploy:us-east-1:230339925016:application:Charltonecs-lab",
+				"arn:aws:codedeploy:us-east-1:230339925016:deploymentgroup:Charltonecs-lab/codedeploy-ecs",
+				"arn:aws:codedeploy:us-east-1:230339925016:deploymentconfig:*"
+			]
+		}
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": [
+				"ecs:RegisterTaskDefinition",
+				"ecs:DescribeTaskDefinition",
+				"ecs:DescribeServices",
+				"ecs:UpdateService",
+				"ecs:DescribeClusters"
+			],
+			"Resource": "*"
+		}
+	]
+}
