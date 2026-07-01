@@ -16,14 +16,14 @@ This project implements a Blue/Green deployment strategy using the following AWS
 * **Amazon ECS (Fargate)**: Runs the application containers serverlessly.
 * **Application Load Balancer (ALB)**: Routes traffic to active tasks via ports `80` and `8080`.
 
----
+## 🚀 Architecture Diagram
+
+![AWS ECS Fargate Blue-Green CI/CD Pipeline](CI_CD Final.png)
 
 ## 📂 Repository Structure
 
 * `taskdef.json` — Defines the ECS Task Definition (container image, CPU/Memory, port mappings).
 * `appspec.yaml` — Instructs AWS CodeDeploy on how to route traffic during deployment.
-
----
 
 ## 🛠️ Prerequisites & Setup
 
@@ -32,7 +32,7 @@ Before running this pipeline, ensure you have:
 2. The AWS CLI or AWS CloudShell installed/configured.
 3. An ECS Fargate cluster created with an ALB and two Target Groups (Target Group 1 and Target Group 2).
 
-### Deployment Steps
+## Deployment Steps
 
 1. **Configure Task Definition:** Update the `taskdef.json` file with your specific execution role ARNs and ECR repository URI.
 2. **Push to GitHub:** Commit your changes and push them to the `main` branch.
