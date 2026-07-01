@@ -18,7 +18,7 @@ This project implements a Blue/Green deployment strategy using the following AWS
 
 ## 🚀 Architecture Diagram
 
-![AWS ECS Fargate Blue-Green CI/CD Pipeline](CICD Final.png)
+![AWS ECS Fargate Blue-Green CI/CD Pipeline](CICD.png)
 
 ## 📂 Repository Structure
 
